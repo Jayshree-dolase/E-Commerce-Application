@@ -125,6 +125,7 @@ public class ProductTable {
 		System.out.println("Enetr the quantity of the Product  : ");
 		int Product_quantity = sc.nextInt();
 		
+		
 		producttable.insertProduct(Product_Id,Product_description,Product_name,Product_price,Product_quantity);
 		
 		}
