@@ -1,0 +1,59 @@
+1> Product Name : Apple iPhone 15 Pro Max(Black Titanium)
+ Display : 6.70-inch  Camera:12MP, RAM : 8GB, Storage : 256GB
+price : 148900
+qty : 100
+
+2 > Product : Apple iPhone 15 Pro Max (Natural Titanium)
+Display : 17.02cm , Camera: 48MP,Storage : 512GB 
+Price : 168900
+qty : 80
+
+
+3 >Product: Apple iPhone 14 Pro Max (Space Black)
+Display: 17.02 cm ,Camera : 48MP , Storage: 1TB
+Price:  179900
+Qty: 60
+
+
+4> Product: Apple iPhone 14 Pro (Deep Purple)
+Display: 15.49 cm ,Camera: 48MP ,Storage: 512GB
+Price: 139900
+Qty: 85
+
+
+
+5 >Product: Apple iPhone 13 Pro Max (Graphite)
+Display: 17.02 ,Camera: 12MP,Storage: 512GB
+Price:  159900
+Qty: 50
+
+
+6> Product: Apple iPhone 13 Pro (Sierra Blue)
+Display: 15.49 ,Camera: 12MP ,Storage: 256GB
+Price:  129900
+Qty: 70
+
+
+7> Product: Apple iPhone 12 Pro Max (Pacific Blue)
+Display: 17.02,Camera: 12MP ,Storage: 512GB
+Price: 149900
+Qty: 65
+
+
+8> Product: Apple iPhone 12 Pro (Gold)
+Display: 15.49,Camera: 12MP,Storage: 256GB
+Price: 119900
+Qty: 55
+
+
+9> Product: Apple iPhone 11 Pro Max (Midnight Green)
+Display: 16.51,Camera: 12MP ,Storage: 512GB
+Price: 139900
+Qty: 40
+
+
+10> Product: Apple iPhone 11 Pro (Silver)
+Display: 15.49,Camera: 12MP,Storage: 256GB
+Price:  109900
+Qty: 50
+

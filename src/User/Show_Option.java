@@ -1,54 +1,71 @@
 package User;
 
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Properties;
 import java.util.Scanner;
 
-public class Show_Option  extends Roles{
+public class Show_Option extends Roles {
+
+	public static final String Driver = "com.mysql.cj.jdbc.Driver";
+	public static final String url = "jdbc:mysql://localhost:3306/ecom";
+	public static final String username = "root";
+	public static final String password = "root";
 
 	public static Scanner sc = new Scanner(System.in);
 
-	
-
-	public void selction() {
+	public void selction() throws SQLException {
 
 		System.out.println("Select Role. ");
 		int choice = sc.nextInt();
 
-		System.out.println("Enter your choice. ");
-		int choice1 = sc.nextInt();
+//		System.out.println("Enter your choice. ");
+//		int choice1 = sc.nextInt();
 
 		switch (choice) {
 
 		case 1: {
-			System.out.println("User Operation");
-
+			System.out.println("Enter choice User Operation");
+			int choice1 = sc.nextInt();
 			switch (choice1) {
 
 			case 1: {
-				userRegistration();
+
+				UserRegistration userReg = new UserRegistration();
+
+				userReg.userRegistration();
+
 				break;
 			}
-			case 2:{
-				userLogin();
-               break;
+			case 2: {
+				userLogin userlog = new userLogin();
+
+				userlog.userLogin();
+				
+				break;
 			}
-			case 3:{
+			case 3: {
 				userviewProductitemasSortedOrder();
 				break;
 			}
-			case 4:{
+			case 4: {
 				buyProduct();
 				break;
 			}
-			case 5:{
+			case 5: {
 				viewCart();
 				break;
 			}
-			case 6:{
+			case 6: {
 				purchasetheitem();
 				break;
-			     }
 			}
-			
+			}
+
 			break;
 		}
 
@@ -67,30 +84,28 @@ public class Show_Option  extends Roles{
 	public static void purchasetheitem() {
 
 		System.out.println("Username >> ");
-		String username= sc.next();
-		
+		String username = sc.next();
+
 		System.out.println("Total Bill Amount");
-		
+
 	}
 
-	public static  void viewCart() {
-	
+	public static void viewCart() {
+
 		System.out.println("Product item has been added to cart ");
-		
+
 	}
 
 	public static void buyProduct() {
-		
+
 		System.out.println("Enter the product id to buy product >> ");
 		int Product_Id = sc.nextInt();
-		
+
 		System.out.println("Enter the quantity >> ");
 		int Product_Quantity = sc.nextInt();
-		
+
 		System.out.println("Do you want to view cart (Yes/No)");
-		
-		
-		
+
 	}
 
 	public static void userviewProductitemasSortedOrder() {
@@ -99,51 +114,16 @@ public class Show_Option  extends Roles{
 
 		System.out.println(" Product Name >> ");
 		String Product_Name = sc.next();
-		
+
 		System.out.println(" Product Description >> ");
 		String Product_Desc = sc.next();
-		
+
 		System.out.println(" Available Quantity >> ");
 		String Available_Qty = sc.next();
-		
+
 		System.out.println(" Available Price >> ");
 		String Available_Price = sc.next();
-		
-	}
-
-	public static void userLogin() {
-		System.out.println(" Enter the username >> ");
-		String username = sc.next();
-
-		System.out.println(" Enter the password >> ");
-		String password = sc.next();
 
 	}
-
-	public static void userRegistration() {
-		System.out.println("Enter the first name >> ");
-		String name = sc.next();
-
-		System.out.println("Enter the last name >> ");
-		String lastname = sc.next();
-
-		System.out.println("Enter the username >> ");
-		String username = sc.next();
-
-		System.out.println("Enter the password >> ");
-		String password = sc.next();
-
-		System.out.println("Enter the city >> ");
-		String city = sc.next();
-
-		System.out.println("Enter the mail id >> ");
-		String mail_id = sc.next();
-
-		System.out.println(" Enter the mobile number >> ");
-		int mobile_No = sc.nextInt();
-
-	}
-
-
 
 }
