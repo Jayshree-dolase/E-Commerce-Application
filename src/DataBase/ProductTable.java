@@ -37,37 +37,48 @@ public class ProductTable {
 //	}
 
 		
-	public void createProduct() { }
-		//try {
-//			Properties properties = new Properties();
-//			FileInputStream inputStream = new FileInputStream(new File(" "));
-//			properties.load(inputStream);
-//			 String Driver =properties.getProperty("Driver");
-//			 String url =properties.getProperty("url");
-//			 String username =properties.getProperty("username");
-//			 String password =properties.getProperty("password");
-//			
-//			
-//			// 1. load driver class
-//			Class.forName(Driver);
-//
-//			// 2. establish connection
-//			Connection con = DriverManager.getConnection(url, username, password);
-//
-//			// 3. prepare sql statment
-//
+	public void createProduct() { 
+		try {
+			Properties properties = new Properties();
+			FileInputStream inputStream = new FileInputStream(new File("D:\\Velocity_E-commerce\\E-Commerce-Application\\Resources\\config.properties "));
+			properties.load(inputStream);
+			 String Driver =properties.getProperty("Driver");
+			 String url =properties.getProperty("url");
+			 String username =properties.getProperty("username");
+			 String password =properties.getProperty("password");
+			
+			
+			// 1. load driver class
+			Class.forName(Driver);
+
+			// 2. establish connection
+			Connection con = DriverManager.getConnection(url, username, password);
+
+			// 3. prepare sql statment
+
 //			PreparedStatement stmt = con.prepareStatement(
 //					"create table product (Product_Id int , Product_description varchar(256) ,Product_name varchar(100) ,Product_price int ,Product_quantity int)");
-//
-//			int i = stmt.executeUpdate();
-//
-//			System.out.println("Done ");
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//	}
+
+			String createProductQuery = "CREATE TABLE product ("
+				    + "Product_Id INT PRIMARY KEY, "
+				    + "Product_description VARCHAR(256), "
+				    + "Product_name VARCHAR(100), "
+				    + "Product_price INT, "
+				    + "Product_quantity INT"
+				    + ")";
+			
+			PreparedStatement stmt = con.prepareStatement(createProductQuery);
+			
+
+			int i = stmt.executeUpdate();
+
+			System.out.println("Done ");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	public   void insertProduct(int Product_Id, String Product_description, String Product_name, int Product_price,
 			int Product_quantity) {
@@ -107,28 +118,28 @@ public class ProductTable {
 		
 		ProductTable producttable = new ProductTable();
 
-		// producttable.createProduct();
+	 producttable.createProduct();
 		
-		for(int i=0;i<=10;i++) {
-		System.out.println("Enetr  Product_Id : ");
-		int Product_Id = sc.nextInt();
-
-		System.out.println("Enetr Product description : ");
-		String Product_description = sc.next();
-
-		System.out.println("Enetr Product name : ");
-		String Product_name = sc.next();
-
-		System.out.println("Enetr  the price of Product  : ");
-	    int  Product_price = sc.nextInt();
-
-		System.out.println("Enetr the quantity of the Product  : ");
-		int Product_quantity = sc.nextInt();
-		
-		
-		producttable.insertProduct(Product_Id,Product_description,Product_name,Product_price,Product_quantity);
-		
+//		for(int i=0;i<=10;i++) {
+//		System.out.println("Enetr  Product_Id : ");
+//		int Product_Id = sc.nextInt();
+//
+//		System.out.println("Enetr Product description : ");
+//		String Product_description = sc.next();
+//
+//		System.out.println("Enetr Product name : ");
+//		String Product_name = sc.next();
+//
+//		System.out.println("Enetr  the price of Product  : ");
+//	    int  Product_price = sc.nextInt();
+//
+//		System.out.println("Enetr the quantity of the Product  : ");
+//		int Product_quantity = sc.nextInt();
+//		
+//		
+//		producttable.insertProduct(Product_Id,Product_description,Product_name,Product_price,Product_quantity);
+//		
 		}
 	}
 
-}
+
